@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 20px;
+      font-size: 2em;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .messages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .message-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .message-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .message-card h3 {
+      margin-top: 0;
+      color: #ff6f61;
+    }
+
+    footer {
+      background-color: #ff6f61;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Balloon animation */
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #ff6f61, #c94c4c);
+      border-radius: 50% 50% 50% 50%;
+      animation: float 10s infinite ease-in-out;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: #333;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-600px) translateX(30px); }
+      100% { transform: translateY(-1200px) translateX(-30px); }
+    }
+
+    /* Confetti animation */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      animation: fall 5s infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Music button */
+    #music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      z-index: 3;
+    }
+
+    #music-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>🎉❤️❤️❤️ Happy Birthday 29TH , Tony aka Valentine! 🎂❤️❤️❤️</header>
+
+  <section class="gallery">
+    <img src="IMG-20190216-WA0000.jpg" alt="Birthday Person">
+    <img src="TONY.jpg" alt="Birthday Person">
+    <img src="IMG_5914.JPG" alt="Birthday Person">
+  </section>
+
+  <section class="messages">
+    <div class="message-card">
+      <h3>From DAD</h3>
+      <p>Happy Birthday Anto, another year has been added. We thank God for the love He has shown to the family, by protecting and blessing you all these years, may His love continue being upon you.Wishing you many more.Age with Grace🎂🎂🎂</p>
+    </div>
+    <div class="message-card">
+      <h3>From MOM </h3>
+      <p> Happy birthday Antony, wish you many more years to come Sonny. Enjoy your Day. Hlala ukhuleka God first. May your special day be filled with love, surprises, and cake! 🎂</p>
+    </div>
+    <div class="message-card">
+      <h3>From PEE</h3>
+      <p>Happy Birthday. We thank God for the added year, may He continue to bless you with many more years. Cheers to another year.🎁🥳🎈🎂</p>
+    </div>
+    <div class="message-card">
+      <h3>From PEACE</h3>
+      <p>Sending you warm wishes and lots of hugs on your birthday. Enjoy every moment! 🎁Happy Birthday</p>
+    </div>
+  </section>
+
+  <footer>❤️❤️❤️❤️Made with ❤️❤️❤️❤️❤️ </footer>
+
+  <!-- Balloons -->
+  <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="balloon" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="balloon" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="balloon" style="left: 70%; animation-delay: 6s;"></div>
+  <div class="balloon" style="left: 90%; animation-delay: 8s;"></div>
+
+  <!-- Confetti -->
+  <div class="confetti" style="left: 20%; background-color: #ff6f61; animation-delay: 0s;"></div>
+  <div class="confetti" style="left: 40%; background-color: #ffd700; animation-delay: 1s;"></div>
+  <div class="confetti" style="left: 60%; background-color: #00bfff; animation-delay: 2s;"></div>
+  <div class="confetti" style="left: 80%; background-color: #32cd32; animation-delay: 3s;"></div>
+
+  <!-- Music -->
+  <audio id="birthday-music" loop>
+    <source src="birthday song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="music-btn">🎵</button>
+
+  <script>
+    const music = document.getElementById('birthday-music');
+    const btn = document.getElementById('music-btn');
+    let playing = false;
+
+    btn.addEventListener('click', () => {
+      if (playing) {
+        music.pause();
+        playing = false;
+        btn.textContent = "🎵";
+      } else {
+        music.play();
+        playing = true;
+        btn.textContent = "⏸";
+      }
+    });
+  </script>
+</body>
+</html>
